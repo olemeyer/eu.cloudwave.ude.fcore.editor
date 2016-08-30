@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/eu.cloudwave.ude.fcore.graphiti/src" editDirectory="/eu.cloudwave.ude.fcore.graphiti.edit/src"
+    editorDirectory="/eu.cloudwave.ude.fcore.graphiti.editor/src" modelPluginID="eu.cloudwave.ude.fcore.graphiti"
+    modelName="FCORE" modelPluginClass="" editPluginClass="eu.cloudwave.ude.fcore.graphiti.FCORE.provider.FCOREEditPlugin"
+    editorPluginClass="eu.cloudwave.ude.fcore.graphiti.FCORE.presentation.FCOREEditorPlugin"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" testSuiteClass="eu.cloudwave.ude.fcore.graphiti.FCORE.tests.FCOREAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    editPluginID="eu.cloudwave.ude.fcore.graphiti.edit" editorPluginID="eu.cloudwave.ude.fcore.graphiti.editor"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>fcore.ecore</foreignModel>
+  <genPackages prefix="FCORE" basePackage="eu.cloudwave.ude.fcore.graphiti" disposableProviderFactory="true"
+      ecorePackage="fcore.ecore#/">
+    <genClasses ecoreClass="fcore.ecore#//FeatureModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/rootFeature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/groupFeatures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/solitaryFeatures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/featureGroups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/attributeConstraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/requiresFeatureConstraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/excludesFeatureConstraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/softgoals"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/featureInfluences"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/attributeInfluences"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/mandatoryConnections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/optionalConnections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/featureToGroupConnections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/groupToFeatureConnections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureModel/AttributeConstraintConnections"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//Feature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//Feature/selected"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//Feature/attributeConstraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fcore.ecore#//Feature/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//Feature/featureConstraintsStarts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//Feature/featureConstraintsEnds"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//Feature/influences"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//Feature/outgoingSingleFeatureConnections"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//Feature/featureToGroupConnections"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//RootFeature"/>
+    <genClasses ecoreClass="fcore.ecore#//SolitaryFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//SolitaryFeature/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//SolitaryFeature/max"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//SolitaryFeature/incomingSingleFeatureConnection"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//GroupFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//GroupFeature/groupToFeatureConnection"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//FeatureGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//FeatureGroup/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//FeatureGroup/max"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureGroup/featureToGroupConnection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureGroup/groupToFeatureConnections"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//Attribute/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//Attribute/influences"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//Attribute/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//Attribute/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//Attribute/max"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//AttributeConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//AttributeConstraint/equation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//AttributeConstraint/attributeConstraintConnection"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//Softgoal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//Softgoal/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//Softgoal/influence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//Softgoal/weighting"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//Conncection"/>
+    <genClasses ecoreClass="fcore.ecore#//FeatureConstraint">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureConstraint/featureStart"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureConstraint/featureEnd"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//RequiresFeatureConstraint"/>
+    <genClasses ecoreClass="fcore.ecore#//ExcludesFeatureConstraint"/>
+    <genClasses ecoreClass="fcore.ecore#//Influence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//Influence/contribution"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//Influence/softgoal"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//InfluenceFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//InfluenceFeature/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//InfluenceAttribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//InfluenceAttribute/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//SingleFeatureConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//SingleFeatureConnection/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//SingleFeatureConnection/target"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//CardinalityConnection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//CardinalityConnection/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fcore.ecore#//CardinalityConnection/max"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//MandatoryConnection"/>
+    <genClasses ecoreClass="fcore.ecore#//OptionalConnection"/>
+    <genClasses ecoreClass="fcore.ecore#//FeatureToGroupConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureToGroupConnection/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//FeatureToGroupConnection/target"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//GroupToFeatureConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//GroupToFeatureConnection/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//GroupToFeatureConnection/target"/>
+    </genClasses>
+    <genClasses ecoreClass="fcore.ecore#//AttributeConstraintConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//AttributeConstraintConnection/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fcore.ecore#//AttributeConstraintConnection/target"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

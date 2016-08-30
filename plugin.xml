@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+      point="org.eclipse.graphiti.ui.diagramTypes">
+    <diagramType
+      description="This is the diagram type for fCore"
+      id="eu.cloudwave.ude.fcore.graphiti.diagram.fCoreDiagramType"
+      name="fCore Diagram Type"
+      type="eu.cloudwave.ude.fcore.graphiti.diagram.fCoreDiagramType">
+    </diagramType>
+  </extension>
+
+  <extension
+      point="org.eclipse.graphiti.ui.diagramTypeProviders">
+    <diagramTypeProvider
+      class="eu.cloudwave.ude.fcore.graphiti.diagram.FCoreDiagramTypeProvider"
+      description="This is an editor for fCore feature diagrams"
+      id="eu.cloudwave.ude.fcore.graphiti.diagram.FCoreDiagramTypeProvider"
+      name="fCore editor">
+      <diagramType
+        id="eu.cloudwave.ude.fcore.graphiti.diagram.fCoreDiagramType">
+      </diagramType>
+    </diagramTypeProvider>
+  </extension>
+  
+  <extension
+      point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+    <propertyContributor contributorId="eu.cloudwave.ude.fcore.graphiti.diagram.fCoreDiagramType.PropertyContributor"> 
+        <propertyCategory category="fCore"> 
+        </propertyCategory> 
+    </propertyContributor> 
+  </extension>
+       
+  <extension
+      point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+    <propertyTabs
+          contributorId="eu.cloudwave.ude.fcore.graphiti.diagram.fCoreDiagramType.PropertyContributor">
+    <propertyTab
+         category="fCore"
+         id="fcore.main.tab"
+          label="Main">
+    </propertyTab>
+   </propertyTabs>
+  </extension>
+     
+  <extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="eu.cloudwave.ude.fcore.graphiti.diagram.fCoreDiagramType.PropertyContributor">
+        <propertySection
+              class="eu.cloudwave.ude.fcore.graphiti.property.featuregroup.FCoreFeatureGroupSection"
+              filter="eu.cloudwave.ude.fcore.graphiti.property.featuregroup.FCoreFeatureGroupFilter"
+              id="fcore.main.tab.featuregroup"
+              tab="fcore.main.tab">
+        </propertySection>
+    </propertySections>
+  </extension>
+  
+  <extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="eu.cloudwave.ude.fcore.graphiti.diagram.fCoreDiagramType.PropertyContributor">
+        <propertySection
+              class="eu.cloudwave.ude.fcore.graphiti.property.attribute.FCoreAttributeSection"
+              filter="eu.cloudwave.ude.fcore.graphiti.property.attribute.FCoreAttributeFilter"
+              id="fcore.main.tab.attribute"
+              tab="fcore.main.tab">
+        </propertySection>
+    </propertySections>
+  </extension>
+  
+  <extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="eu.cloudwave.ude.fcore.graphiti.diagram.fCoreDiagramType.PropertyContributor">
+        <propertySection
+              class="eu.cloudwave.ude.fcore.graphiti.property.cardinalityconnection.FCoreCardinalityConnectionSection"
+              filter="eu.cloudwave.ude.fcore.graphiti.property.cardinalityconnection.FCoreCardinalityConnectionFilter"
+              id="fcore.main.tab.cardinalityconnection"
+              tab="fcore.main.tab">
+        </propertySection>
+    </propertySections>
+  </extension>
+  
+  <extension
+      point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="eu.cloudwave.ude.fcore.graphiti.diagram.fCoreDiagramType.PropertyContributor">
+        <propertySection
+              class="eu.cloudwave.ude.fcore.graphiti.property.influence.FCoreInfluenceSection"
+              filter="eu.cloudwave.ude.fcore.graphiti.property.influence.FCoreInfluenceFilter"
+              id="fcore.main.tab.influence"
+              tab="fcore.main.tab">
+        </propertySection>
+    </propertySections>
+  </extension>
+     
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated fcore -->
+      <package
+            uri="http://www.cloudwave-fp7.eu/ude/fcore"
+            class="eu.cloudwave.ude.fcore.graphiti.FCORE.FCOREPackage"
+            genModel="model/fcore.genmodel"/>
+   </extension>
+   
+   <extension
+         id="eu.cloudwave.ude.fcore.graphiti.newdiagram"
+         name="New FCore Diagram"
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="eu.cloudwave.ude.fcore.graphiti.category"
+            name="FCore">
+      </category>
+      <wizard
+            category="eu.cloudwave.ude.fcore.graphiti.category"
+            class="eu.cloudwave.ude.fcore.graphiti.wizard.FCoreWizard"
+            icon="img/idea13.png"
+            id="eu.cloudwave.ude.fcore.graphiti.newWizard"
+            name="New fCore Diagram">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <category
+            id="eu.cloudwave.ude.fcore.graphiti.export.fcoreCategory"
+            name="fcore">
+      </category>
+      <wizard
+            category="eu.cloudwave.ude.fcore.graphiti.export.fcoreCategory"
+            class="eu.cloudwave.ude.fcore.graphiti.export.JSONExporter"
+            id="eu.cloudwave.ude.fcore.graphiti.export.jsonwizard"
+            name="Export Features to JSON">
+      </wizard>
+   </extension>
+
+</plugin>
